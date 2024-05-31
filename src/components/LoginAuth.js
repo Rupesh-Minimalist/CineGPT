@@ -3,7 +3,6 @@ import { loginImage } from "../utils/constant";
 import { validate } from '../utils/validate';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../firebase"; // Import the initialized Firebase app
-import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
 const LoginAuth = () => {
@@ -12,7 +11,7 @@ const LoginAuth = () => {
   const [succMessage,SetsuccMessage]= useState(null);
   const email = useRef(null);
   const password = useRef(null);
-  const navigate=useNavigate();
+ 
 
   const handleSignin = () => {
     SetisSignin(!isSignin);
@@ -31,7 +30,7 @@ const LoginAuth = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           SetsuccMessage("Woho ! Account sucessfully created.");
-          navigate("/");
+          // navigate("/"); done at header
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -42,7 +41,7 @@ const LoginAuth = () => {
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
         .then((userCredential) => {
           const user = userCredential.user;
-          navigate("/browse");
+          // navigate("/browse");done at header
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -60,15 +59,15 @@ const LoginAuth = () => {
         <img src={loginImage} alt='img'></img>
       </div>
 
-      <div className='absolute z-10 text-white opacity-75 text-center w-full top-24 text-3xl font-extrabold'>
+      <div className='absolute z-10 text-white opacity-75 text-center w-full top-24 text-4xl font-extrabold'>
         Unlimited movies, TV shows Recommendations
       </div>
 
-      <div className='absolute z-10 text-white opacity-95 text-center w-full top-[135px] text-xl font-extrabold'>
+      <div className='absolute z-10 text-white opacity-95 text-center w-full top-[135px] text-xl font-extrabold animate-pulse'>
         Powered By <b className='text-red-500 text-3xl bg-black bg-opacity-70 rounded-xl px-2'>chatGPT</b>
       </div>
 
-      <form onSubmit={(e) => e.preventDefault()} className='absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black  w-96 flex flex-col text-white rounded-xl bg-opacity-75'>
+      <form onSubmit={(e) => e.preventDefault()} className='absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black w-96 flex flex-col text-white rounded-xl bg-opacity-75'>
         <p className='p-3 text-white font-bold text-3xl text-center'>{isSignin ? "Sign In" : "Sign up"}</p>
 
         {!isSignin && <input type='text' placeholder='Enter Name' className='m-4 mt-3 px-2 py-3 bg-black border border-2 border-gray-500 rounded-md'></input>}
