@@ -20,7 +20,7 @@ const useNowPlayingMovies=()=>{
       }
       let ActualDATA=await response.json();
       let list=ActualDATA.results;
-      console.log(list);
+      // console.log(list);
       dispatch(addNowPlayingMovies(list))
 
     }
