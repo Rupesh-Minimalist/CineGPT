@@ -57,14 +57,14 @@ const LoginAuth = () => {
     <div className='transition-all'>
       <div className='absolute'>
         <img src={loginImage} alt='img'></img>
-      </div>
+      </div>  
 
       <div className='absolute z-10 text-white opacity-75 text-center w-full top-24 text-4xl font-extrabold'>
         Unlimited movies, TV shows Recommendations
       </div>
 
       <div className='absolute z-10 text-white opacity-95 text-center w-full top-[135px] text-xl font-extrabold animate-pulse'>
-        Powered By <b className='text-red-500 text-3xl bg-black bg-opacity-70 rounded-xl px-2'>chatGPT</b>
+        Powered By <b className='text-red-500 text-3xl bg-black bg-opacity-70 rounded-xl px-2'>GeminiAI</b>
       </div>
 
       <form onSubmit={(e) => e.preventDefault()} className='absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black w-96 flex flex-col text-white rounded-xl bg-opacity-75'>

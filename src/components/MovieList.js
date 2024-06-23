@@ -20,9 +20,9 @@ const MovieList = ({ title, movies }) => {
       <div className='mb-5'>
         <div className="text-white font-bold flex justify-between ml-14 ">
           <h1 className="text-xl">{title}</h1>
-          <div className="flex mt-3">
+          <div className="flex mt-3 ">
             <div
-              className="flex justify-center items-center cursor-pointer w-[30px] h-[30px] mx-2 bg-gray-800 rounded-full"
+              className="flex justify-center items-center cursor-pointer w-[30px] h-[30px] mx-2 bg-gray-800 rounded-full mb-3"
               onClick={handleScrollLeft}
             >
               <FaArrowLeft />
@@ -36,7 +36,7 @@ const MovieList = ({ title, movies }) => {
           </div>
         </div>
         <div className="flex overflow-x-auto scroll-smooth no-scrollbar mr-2">
-          <div className="categories flex gap-9 justify-around pl-14 ">
+          <div className="categories flex gap-8 justify-around pl-14 ">
             {movies.map((x) => (
               <MovieCard key={x.id} posterImg={x.poster_path} />
             ))}

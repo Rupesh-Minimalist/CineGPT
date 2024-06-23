@@ -6,6 +6,8 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopular from '../customHooks/usePopular';
 import useTopRated from '../customHooks/useTopRated';
 import useUpcoming from '../customHooks/useUpcoming';
+import GPTSearch from "./GPTsearch";
+import { useSelector } from 'react-redux';
 
 const Browse = () => {
 
@@ -15,12 +17,22 @@ const Browse = () => {
   useTopRated();
   useUpcoming();
 
+  const gptView=useSelector(store=>store.gpt.showGPTsearch)
+
   
   return (
     <>      
             <Header/>
-            <MainContainer/>
-            <SecondaryContainer/>
+            {gptView ? 
+              <GPTSearch/>
+              :
+              <>
+               <MainContainer/>
+               <SecondaryContainer/>
+              </>
+            
+            }
+              
     </>
   )
 }

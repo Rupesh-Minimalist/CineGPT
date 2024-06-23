@@ -18,9 +18,6 @@ export const Body = () => {
 
   ])
 
- 
-  
-
   return (
     <>  
         <RouterProvider router={appRouter}/>
