@@ -1,13 +1,15 @@
 import { useEffect } from 'react'
 import { TRAILER_OPTIONS } from '../utils/constant';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addTrailerVideo } from '../redux/movieSlice';
 
 const useTrailer = (movieId) => {
 
     const dispatch=useDispatch();
+    const ismovie=useSelector(store=>store.movies.trailerVideo)
+
     useEffect(()=>{
-        fetchTrailer();
+       if(!ismovie) fetchTrailer();
     },[])
 
     async function fetchTrailer(){

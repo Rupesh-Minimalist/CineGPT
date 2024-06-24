@@ -23,7 +23,7 @@ const GPTinput = () => {
     let data= await response.json();
     let list=data.results
 
-      return list;
+     return list;
   }
 
   const HandleSearchBtn=async()=> {
@@ -37,7 +37,7 @@ const GPTinput = () => {
     const result = await model.generateContent(gptQuery);
     const response = await result.response;
     const listofMov = response.text().split(",");
-    // console.log(list);
+    console.log(listofMov);
 
     const promiseArray=listofMov.map(movie=>searchTMDB(movie));
     const TMDBresults= await Promise.all(promiseArray)   // beacuse seatchTMDB is async
