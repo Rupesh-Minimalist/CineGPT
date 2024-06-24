@@ -17,7 +17,7 @@ const MovieList = ({ title, movies }) => {
 
   return (
     <>
-      <div className='mb-5'>
+      <div className='mb-5 '>
         <div className="text-white font-bold flex justify-between ml-14 ">
           <h1 className="text-xl">{title}</h1>
           <div className="flex mt-3 ">
@@ -36,7 +36,7 @@ const MovieList = ({ title, movies }) => {
           </div>
         </div>
         <div className="flex overflow-x-auto scroll-smooth no-scrollbar mr-2">
-          <div className="categories flex gap-8 justify-around pl-14 ">
+          <div className="categories flex gap-8 justify-around pl-14  ">
             {movies.map((x) => (
               <MovieCard key={x.id} posterImg={x.poster_path} />
             ))}

@@ -60,7 +60,7 @@ const Header=()=>{
                 {user && <div className='flex items-center'>
                  <button className="rounded-3xl bg-gray-700 bg-opacity-50 px-28 py-2 hover:bg-opacity-60 hover:bg-red-500 hover: mt-10  text-white font-bold text-xl mr-40 shadow-2xl" onClick={HandleGPT}>{gptView? "Search Browse" :"Search GPT"}</button> 
 
-                 <select className="bg-transparent text-white text-lg px-3 py-1 mt-10 " onChange={HandleLangChange}>
+                 <select className=" rounded-md bg-gray-700 bg-opacity-50 hover:bg-gray-600 text-white text-lg px-3 py-1 mt-10 " onChange={HandleLangChange}>
                    {SUPPORTED_LANGUAGES.map((lang) => (
                         <option key={lang.identifier} value={lang.identifier}>{lang.name}
                         </option>

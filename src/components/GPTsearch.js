@@ -7,7 +7,7 @@ import gptImage from "../images/gptImage.jpg"
 const GPTsearch = () => {
   return (
     <div>
-      <div className='absolute -z-10'>
+      <div className=' -z-10 fixed'>
         <img src={gptImage} alt='img'></img>
       </div>  
       <GPTinput/>
