@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# cineGPT 🍿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to cineGPT! - a revolutionary streaming web app that redefines how you enjoy entertainment which is set to transform your viewing experience.
 
-## Available Scripts
+## Key Features 🔑
 
-In the project directory, you can run:
+- **Firebase Authentication** : It ensures secure user authentication through Firebase, providing a smooth and reliable login experience for all users.
+- **TMDB API Integration** : Seamlessly accessing a vast database of movies and TV shows, enriching your Flixify experience with endless entertainment options.
+- **AI-Powered Search Input** : The search bar, backed by Google's Gemini API, delivers intelligent recommendations, making content discovery effortless.
+- **Secured Routing** : It features secured routing, ensuring safe and protected navigation throughout the app,
+- **Multi-language support** : Flixify speaks your language, offering seamless access to content in multiple languages,
+- **Fully Responsive** : Whether you're on a smartphone, tablet, or desktop, it adapts seamlessly to your screen size.
 
-### `npm start`
+## Tech Stack 🛠️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** : Powering our frontend to deliver a user-friendly interface and dynamic components.
+- **Redux** : Managing state transitions effectively to optimize user journey.
+- **React-Router** : Smooth navigation experience, enabling seamless routing and dynamic page rendering.
+- **Tailwind CSS** : Ensuring rapid styling and consistent design across the platform.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started 💻
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have Node.js and npm installed on your machine.
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Rupesh-Minimalist/CineGPT.git
+cd cinegpt
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Generate your Firebase and Gemini API keys and store them in a .env file as below:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_GEMINI_API=your_api_key
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Run the app:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run dev
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Visit `http://localhost:3000` in your browser to see cineGPT in action.
