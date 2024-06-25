@@ -16,7 +16,7 @@ const useNowPlayingMovies=()=>{
   async function fetchNowPlaying(){
 
     try{
-      let response= await fetch('https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1',API_OPTIONS)
+      let response= await fetch('https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/now_playing?page=1',API_OPTIONS)
       if (!response.ok) {
         throw new Error('Network response was not ok' + response.statusText);
       }
