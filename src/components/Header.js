@@ -55,21 +55,26 @@ const Header=()=>{
 
     return(
         <> 
-            <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black  z-20 flex flex-col md:flex-row justify-between">
-                 <img src={logo} alt="logo" className="w-32 pt-5"></img>
-                {user && <div className='flex items-center'>
-                 <button className="rounded-3xl bg-gray-700 bg-opacity-50 px-28 py-2 hover:bg-opacity-60 hover:bg-red-500 hover: mt-10  text-white font-bold text-xl mr-40 shadow-2xl" onClick={HandleGPT}>{gptView? "Search Browse" :"Search GPT"}</button> 
+            <div className="absolute w-full px-8 bg-gradient-to-b from-black z-20 flex flex-col  md:justify-between md:flex-row z-50"> 
+              <div>
+                <img src={logo} alt="logo" className="w-32 pt-5 mx-auto md:mr-28 "></img>
+              </div>
+  
+              {user && <div className=' -mt-3 md:m-0'>
+                 <button className="rounded-3xl bg-animated-gradient mt-10 px-28 py-2  text-white font-bold text-xl shadow-2xl ]" onClick={HandleGPT}>{gptView? "Search Browse" :"Search GPT AI"}</button> 
 
-                 <select className=" rounded-md bg-gray-700 bg-opacity-50 hover:bg-gray-600 text-white text-lg px-3 py-1 mt-10 " onChange={HandleLangChange}>
+                </div>}
+
+              {user && <div className="flex items-center justify-around -mt-7 md:m-0 ">
+                <select className=" rounded-md bg-gray-700 bg-opacity-50 hover:bg-gray-600 text-white text-lg px-3 py-1 mt-10 " onChange={HandleLangChange}>
                    {SUPPORTED_LANGUAGES.map((lang) => (
                         <option key={lang.identifier} value={lang.identifier}>{lang.name}
                         </option>
                      ))}
                  </select>
+                <img className='px-3 py-1 mt-10 ml-4 hidden md:inline-block' src={userLOGO} alt='userLOGO'></img>
+                <button onClick={handleSignout} className="rounded bg-red-600 px-3  py-1 hover:bg-red-700 mt-10 ml-4 text-white">Sign out</button></div> }
 
-                 <img className='px-3 py-1 mt-10 ml-4' src={userLOGO} alt='userLOGO'></img>
-                 <button onClick={handleSignout} className="rounded bg-red-600 px-3 py-1 hover:bg-red-700 mt-10 ml-4 text-white">Sign out</button>
-                </div>}
             </div>     
         </>
     );

@@ -55,19 +55,19 @@ const LoginAuth = () => {
     <>
     <Header/>
     <div className='transition-all'>
-      <div className='absolute'>
-        <img src={loginImage} alt='img'></img>
+      <div className='fixed '>
+        <img src={loginImage} alt='img' className='h-screen object-cover md:h-full w-screen'></img>
       </div>  
 
-      <div className='absolute z-10 text-white opacity-75 text-center w-full top-24 text-4xl font-extrabold'>
+      <div className='absolute z-10 text-white opacity-75 text-center w-full md:top-24 top-36 text-4xl font-extrabold'>
         Unlimited movies, TV shows Recommendations
       </div>
 
-      <div className='absolute z-10 text-white opacity-95 text-center w-full top-[135px] text-xl font-extrabold animate-pulse'>
+      <div className='absolute z-10 text-white opacity-95 text-center w-full top-[270px] md:top-[135px] text-xl font-extrabold animate-pulse'>
         Powered By <b className='text-red-500 text-3xl bg-black bg-opacity-70 rounded-xl px-2'>GeminiAI</b>
       </div>
 
-      <form onSubmit={(e) => e.preventDefault()} className='absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black w-96 flex flex-col text-white rounded-xl bg-opacity-75'>
+      <form onSubmit={(e) => e.preventDefault()} className='absolute top-[50%] md:top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black w-96 flex flex-col text-white rounded-xl bg-opacity-75'>
         <p className='p-3 text-white font-bold text-3xl text-center'>{isSignin ? "Sign In" : "Sign up"}</p>
 
         {!isSignin && <input type='text' placeholder='Enter Name' className='m-4 mt-3 px-2 py-3 bg-black border border-2 border-gray-500 rounded-md'></input>}

@@ -50,16 +50,14 @@ const GPTinput = () => {
   }
 
   return (
-    <div className=' '>
+    <div >
      <form onSubmit={e=>e.preventDefault()}>
 
-        <div className='absolute top-56 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-            <input type='text' ref={inputText} className='w-[500px] pl-3 py-3 rounded-l-xl text-white bg-gray-700' placeholder={lang[choosenlang].gptSearchPlaceholder}></input>
-            <button className='rounded-r-xl bg-red-600 px-3 py-3 hover:bg-red-700  text-white' onClick={HandleSearchBtn}>{lang[choosenlang].search}</button>
+        <div className='absolute top-[30%] md:top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 '>
+            <input type='text' ref={inputText} className='rounded-2xl md:rounded-l-xl w-[360px] md:w-[500px] pl-3 py-3  text-white bg-gray-700 ' placeholder={lang[choosenlang].gptSearchPlaceholder}></input>
+            <button className='rounded-md md:rounded-r-xl bg-animated-gradient px-10 md:px-5 py-2 md:py-3  text-white absolute top-14 left-1/2 -translate-x-1/2 md:static md:top-0 md:-translate-x-1/2 md:left-0' onClick={HandleSearchBtn}>{lang[choosenlang].search}</button>
         </div>
      </form>
-
-     {/* <MovieList /> */}
 
     </div>
   )
