@@ -5,10 +5,10 @@ Welcome to cineGPT! - a revolutionary streaming web app that redefines how you e
 ## Key Features 🔑
 
 - **Firebase Authentication** : It ensures secure user authentication through Firebase, providing a smooth and reliable login experience for all users.
-- **TMDB API Integration** : Seamlessly accessing a vast database of movies and TV shows, enriching your Flixify experience with endless entertainment options.
+- **TMDB API Integration** : Seamlessly accessing a vast database of movies and TV shows, enriching your cineGPT experience with endless entertainment options.
 - **AI-Powered Search Input** : The search bar, backed by Google's Gemini API, delivers intelligent recommendations, making content discovery effortless.
 - **Secured Routing** : It features secured routing, ensuring safe and protected navigation throughout the app,
-- **Multi-language support** : Flixify speaks your language, offering seamless access to content in multiple languages,
+- **Multi-language support** : cineGPT speaks your language, offering seamless access to content in multiple languages,
 - **Fully Responsive** : Whether you're on a smartphone, tablet, or desktop, it adapts seamlessly to your screen size.
 
 ## Tech Stack 🛠️
