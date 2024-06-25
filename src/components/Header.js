@@ -65,7 +65,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={`fixed w-full px-8 flex flex-col md:justify-between md:flex-row z-50 ${isScrolled ? "bg-black" : "bg-gradient-to-b from-black"} pb-5`}>
+      <div className={`fixed w-full px-8 flex flex-col md:justify-between md:flex-row z-50 ${isScrolled ? "bg-black" : "bg-gradient-to-b from-black"}  pb-5`}>
         <div>
           <img src={logo} alt="logo" className="w-32 pt-5 mx-auto md:mr-28" />
         </div>
@@ -82,7 +82,7 @@ const Header = () => {
         )}
 
         {user && (
-          <div className="flex items-center justify-around -mt-7 md:m-0">
+          <div className="flex items-center justify-around -mt-7 md:-mt-2">
             <select
               className="rounded-md bg-gray-700 bg-opacity-50 hover:bg-gray-600 text-white text-lg px-3 py-1 mt-10"
               onChange={HandleLangChange}

@@ -6,7 +6,7 @@ export const API_OPTIONS={
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:'Bearer '+ process.env.REACT_APP_TMDB_KEY
+      Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjJlYWU2MzViNDA3ZGU2OWNkYWU1ZDg1NmRjMmUxZSIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1p-2HbAID16OzzLc1Gbn_GiOuB9bRgXGyy3aRHMxQgU'
     }
   };
 
@@ -14,7 +14,7 @@ export const TRAILER_OPTIONS= {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjJlYWU2MzViNDA3ZGU2OWNkYWU1ZDg1NmRjMmUxZSIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1p-2HbAID16OzzLc1Gbn_GiOuB9bRgXGyy3aRHMxQgU'
   }
 };
 
@@ -24,7 +24,7 @@ export const API_OPTIONS_POPULAR = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjJlYWU2MzViNDA3ZGU2OWNkYWU1ZDg1NmRjMmUxZSIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1p-2HbAID16OzzLc1Gbn_GiOuB9bRgXGyy3aRHMxQgU'
   }
 };
 
@@ -32,7 +32,7 @@ export const API_OPTIONS_TOP_RATED={
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjJlYWU2MzViNDA3ZGU2OWNkYWU1ZDg1NmRjMmUxZSIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1p-2HbAID16OzzLc1Gbn_GiOuB9bRgXGyy3aRHMxQgU'
   }
 };
 
@@ -40,7 +40,7 @@ export const API_OPTIONS_UPCOMING={
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjJlYWU2MzViNDA3ZGU2OWNkYWU1ZDg1NmRjMmUxZSIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1p-2HbAID16OzzLc1Gbn_GiOuB9bRgXGyy3aRHMxQgU'
   }
 };
 
@@ -50,13 +50,13 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
-export const GEMINI_KEY=process.env.REACT_APP_GEMINI_KEY;
+export const GEMINI_KEY=process.env.REACT_APP_gemini_key;
 
 
 export const API_OPTIONS_SEARCH={
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+    Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjJlYWU2MzViNDA3ZGU2OWNkYWU1ZDg1NmRjMmUxZSIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1p-2HbAID16OzzLc1Gbn_GiOuB9bRgXGyy3aRHMxQgU'
   }
 };
