@@ -1,28 +1,29 @@
-import React from 'react'
-import LoginAuth from "./LoginAuth"
+import React from "react";
+import LoginAuth from "./LoginAuth";
 import Browse from "./Browse";
-import {RouterProvider, createBrowserRouter} from "react-router-dom"
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 export const Body = () => {
-  
-  const appRouter=createBrowserRouter([
-    { 
-      path:"/",
-      element:<LoginAuth/>
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <LoginAuth />,
     },
     {
-      path:"/browse",
-      element:<Browse/>
-
-    }
-
-  ])
+      path: "/browse",
+      element: <Browse />,
+    },
+    // {
+    //   path: "/browse/watch/:id",
+    //   element: <WatchTrailer />,
+    // }
+  ]);
 
   return (
-    <>  
-        <RouterProvider router={appRouter}/>
+    <>
+      <RouterProvider router={appRouter} />
     </>
-  )
-}
+  );
+};
 
 export default Body;

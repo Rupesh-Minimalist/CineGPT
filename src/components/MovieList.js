@@ -1,23 +1,24 @@
-import React from 'react';
-import MovieCard from './MovieCard';
-import { FaArrowRight, FaArrowLeft } from 'react-icons/fa6';
+import React from "react";
+import MovieCard from "./MovieCard";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 
 const MovieList = ({ title, movies }) => {
   if (!movies) return null;
 
   const handleScrollLeft = () => {
-    const foodCategory = document.querySelector('.categories');
+    const foodCategory = document.querySelector(".categories");
     foodCategory.scrollLeft -= 480;
   };
 
   const handleScrollRight = () => {
-    const foodCategory = document.querySelector('.categories');
+    const foodCategory = document.querySelector(".categories");
     foodCategory.scrollLeft += 480;
   };
 
+
   return (
     <>
-      <div className='mb-5 '>
+      <div className="mb-5 ">
         <div className="text-white font-bold flex justify-between ml-14 ">
           <h1 className="text-xl">{title}</h1>
           <div className="flex mt-3 ">
@@ -36,9 +37,9 @@ const MovieList = ({ title, movies }) => {
           </div>
         </div>
         <div className="flex overflow-x-auto scroll-smooth no-scrollbar mr-2">
-          <div className="categories flex gap-8 justify-around pl-14  ">
+          <div className="flex gap-8 justify-around pl-14  ">
             {movies.map((x) => (
-              <MovieCard key={x.id} posterImg={x.poster_path} />
+              <MovieCard key={x.id} posterImg={x.poster_path} name={x.original_title} ratings={x.vote_average} date={x.release_date} />
             ))}
           </div>
         </div>

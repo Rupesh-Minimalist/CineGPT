@@ -3,7 +3,7 @@ import logo from "../images/logo.png";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../redux/userSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SUPPORTED_LANGUAGES, userLOGO } from "../utils/constant";
 import { toggleGPTbtn } from "../redux/gptSlice";
 import { changeLanguage } from "../redux/configSlice";
@@ -65,13 +65,15 @@ const Header = () => {
 
   return (
     <>
-      <div className={`fixed w-full px-8 flex flex-col md:justify-between md:flex-row z-50 ${isScrolled ? "bg-black" : "bg-gradient-to-b from-black"}  pb-5`}>
+      <div className={`fixed w-full px-8 flex flex-col md:justify-between md:flex-row z-50 ${isScrolled && user ? "bg-gray-900" : "bg-gradient-to-b from-black"} pb-5`}>
         <div>
-          <img src={logo} alt="logo" className="w-32 pt-5 mx-auto md:mr-28" />
+           <img src={logo} alt="logo" className="w-32 pt-5 mx-auto md:mr-28" onClick={HandleGPT} />
+          
+          
         </div>
 
         {user && (
-          <div className="-mt-3 md:m-0">
+          <div className="-mt-3 md:m-0 hover:scale-105 duration-300">
             <button
               className="rounded-3xl bg-animated-gradient mt-10 px-28 py-2 text-white font-bold text-xl shadow-2xl"
               onClick={HandleGPT}
