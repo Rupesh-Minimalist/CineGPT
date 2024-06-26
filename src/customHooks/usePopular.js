@@ -14,7 +14,7 @@ const usePopular=()=>{
 
     async function fetchPopular(){
         
-        let response=await fetch("https://proxy.cors.sh/https://api.themoviedb.org/3/movie/popular?page=1",API_OPTIONS_POPULAR);
+        let response=await fetch("https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/popular?page=1",API_OPTIONS_POPULAR);
     
         let ActualDATA=await response.json();
         let list=ActualDATA.results;

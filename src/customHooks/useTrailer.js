@@ -14,7 +14,7 @@ const useTrailer = (movieId) => {
 
     async function fetchTrailer(){
 
-        let response=await fetch("https://proxy.cors.sh/https://api.themoviedb.org/3/movie/"+movieId+"/videos?language=en-US", TRAILER_OPTIONS)
+        let response=await fetch("https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/"+movieId+"/videos?language=en-US", TRAILER_OPTIONS)
 
         let ActualDATA= await response.json();
         let AllTrailer=ActualDATA.results.filter((x)=>x.type==="Trailer");

@@ -14,7 +14,7 @@ const GPTinput = () => {
   const [loading, setLoading] = useState(false); 
 
   const searchTMDB = async (movie) => {
-    let response = await fetch("https://proxy.cors.sh/https://api.themoviedb.org/3/search/movie?query="
+    let response = await fetch("https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/search/movie?query="
       + movie +
       "&include_adult=false&language=en-US&page=1", API_OPTIONS_SEARCH);
 
