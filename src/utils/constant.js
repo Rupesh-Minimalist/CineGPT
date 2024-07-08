@@ -63,4 +63,4 @@ export const SUPPORTED_LANGUAGES = [
 export const GEMINI_KEY=process.env.REACT_APP_gemini_key;
 
 
-export const CORSProxy="https://crossorigin.me/";
+export const CORSProxy="https://cors-proxy.io/?";
