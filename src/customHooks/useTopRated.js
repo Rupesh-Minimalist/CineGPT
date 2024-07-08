@@ -16,7 +16,7 @@ const useTopRated=()=>{
     async function fetchTopRated(){
 
 
-        let response=await fetch("../../netlify/functions/TopRated",API_OPTIONS_TOP_RATED);
+        let response=await fetch(CORSProxy+"https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",API_OPTIONS_TOP_RATED);
     
         let ActualDATA=await response.json();
         let list=ActualDATA.results;

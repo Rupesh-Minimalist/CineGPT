@@ -13,7 +13,7 @@ const useUpcoming = () => {
 
   async function fetchUpcoming() {
     let response = await fetch(
-      "../../netlify/functions/Upcoming",
+      CORSProxy+"https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
       API_OPTIONS_UPCOMING
     );
 

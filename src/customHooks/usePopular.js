@@ -14,7 +14,7 @@ const usePopular=()=>{
 
     async function fetchPopular(){
         
-        let response=await fetch("../../netlify/functions/Popular",API_OPTIONS_POPULAR);
+        let response=await fetch(CORSProxy+"https://api.themoviedb.org/3/movie/popular?page=1",API_OPTIONS_POPULAR);
     
         let ActualDATA=await response.json();
         let list=ActualDATA.results;
