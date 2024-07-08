@@ -4,14 +4,14 @@ export const userLOGO="https://occ-0-2085-2186.1.nflxso.net/dnm/api/v6/vN7bi_My8
 
 export const IMG_CDN_URL="https://image.tmdb.org/t/p/w200/";
 
-export const API_OPTIONS={
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer '+ process.env.REACT_APP_tmdb_key
+export const API_OPTIONS = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: `Bearer ${process.env.REACT_APP_tmdb_key}`,
+  },
+};
 
-    }
-  };
 
 export const TRAILER_OPTIONS= {
   method: 'GET',

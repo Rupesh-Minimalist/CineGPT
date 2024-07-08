@@ -4,8 +4,8 @@ exports.handler = async function(event, context) {
   try {
     const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', {
       headers: {
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YzViNWEzNGY0MTBmZDg0YTM0YmQ1MGVjNGU2ZmM2NCIsIm5iZiI6MTcyMDQyNjY5My4xMTgzNTIsInN1YiI6IjY2NTk4ZWQzOWNkNDFiMjg3YTk0MDk2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0Uj6pcI3xhdvxgSC4iOm5si3YsNRHiAjGUdnG2FS4eE'
-      }
+        Authorization: `Bearer ${process.env.REACT_APP_tmdb_key}`,
+      },
     });
     const data = await response.json();
     return {
