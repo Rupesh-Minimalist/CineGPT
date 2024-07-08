@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { API_OPTIONS_TOP_RATED } from "../utils/constant";
+import { API_OPTIONS_TOP_RATED, CORSProxy } from "../utils/constant";
 import { addTopRatedMovies } from "../redux/movieSlice";
 
 const useTopRated=()=>{
@@ -16,7 +16,7 @@ const useTopRated=()=>{
     async function fetchTopRated(){
 
 
-        let response=await fetch("https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",API_OPTIONS_TOP_RATED);
+        let response=await fetch(CORSProxy+"https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",API_OPTIONS_TOP_RATED);
     
         let ActualDATA=await response.json();
         let list=ActualDATA.results;

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import lang from "../utils/languageConstants";
 import { useDispatch, useSelector } from 'react-redux';
 import genAI from '../utils/genAI';
-import { API_OPTIONS_SEARCH } from '../utils/constant';
+import { API_OPTIONS_SEARCH, CORSProxy } from '../utils/constant';
 import { addGptMovieResult } from '../redux/gptSlice';
 import { ClipLoader } from 'react-spinners';  
 
@@ -14,7 +14,7 @@ const GPTinput = () => {
   const [loading, setLoading] = useState(false); 
 
   const searchTMDB = async (movie) => {
-    let response = await fetch("https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/search/movie?query="
+    let response = await fetch(CORSProxy+"https://api.themoviedb.org/3/search/movie?query="
       + movie +
       "&include_adult=false&language=en-US&page=1", API_OPTIONS_SEARCH);
 

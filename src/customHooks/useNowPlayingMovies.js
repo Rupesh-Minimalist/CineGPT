@@ -1,4 +1,4 @@
-import { API_OPTIONS } from "../utils/constant";
+import { API_OPTIONS, CORSProxy } from "../utils/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../redux/movieSlice";
 import { useEffect } from "react";
@@ -15,7 +15,7 @@ const useNowPlayingMovies = () => {
   async function fetchNowPlaying() {
    
       let response = await fetch(
-        "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/now_playing?page=1",
+        CORSProxy+"https://api.themoviedb.org/3/movie/now_playing?page=1",
         API_OPTIONS
       );
      

@@ -2,11 +2,14 @@ export const loginImage="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0e
 
 export const userLOGO="https://occ-0-2085-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
 
+export const IMG_CDN_URL="https://image.tmdb.org/t/p/w200/";
+
 export const API_OPTIONS={
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:'Bearer '+ process.env.REACT_APP_tmdb_key
+      Authorization: 'Bearer '+ process.env.REACT_APP_tmdb_key
+
     }
   };
 
@@ -17,8 +20,6 @@ export const TRAILER_OPTIONS= {
     Authorization: 'Bearer '+ process.env.REACT_APP_tmdb_key
   }
 };
-
-export const IMG_CDN_URL="https://image.tmdb.org/t/p/w200/";
 
 export const API_OPTIONS_POPULAR = {
   method: 'GET',
@@ -33,10 +34,19 @@ export const API_OPTIONS_TOP_RATED={
   headers: {
     accept: 'application/json',
     Authorization: 'Bearer '+ process.env.REACT_APP_tmdb_key
+
   }
 };
 
 export const API_OPTIONS_UPCOMING={
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer '+ process.env.REACT_APP_tmdb_key
+  }
+};
+
+export const API_OPTIONS_SEARCH={
   method: 'GET',
   headers: {
     accept: 'application/json',
@@ -53,10 +63,4 @@ export const SUPPORTED_LANGUAGES = [
 export const GEMINI_KEY=process.env.REACT_APP_gemini_key;
 
 
-export const API_OPTIONS_SEARCH={
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer '+ process.env.REACT_APP_tmdb_key
-  }
-};
+export const CORSProxy="https://thingproxy.freeboard.io/fetch/";
