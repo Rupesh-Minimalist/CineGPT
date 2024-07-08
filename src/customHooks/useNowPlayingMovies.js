@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../redux/movieSlice";
 import { useEffect } from "react";
 
+
 const useNowPlayingMovies = () => {
   const dispatch = useDispatch();
 
@@ -15,7 +16,7 @@ const useNowPlayingMovies = () => {
   async function fetchNowPlaying() {
    
       let response = await fetch(
-        CORSProxy+"https://api.themoviedb.org/3/movie/now_playing?page=1",
+        "../../netlify/functions/nowPlaying",
         API_OPTIONS
       );
      
