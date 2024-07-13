@@ -1,30 +1,31 @@
-import { useEffect } from "react";
+import { API_OPTIONS, CORSProxy } from "../utils/constant";
 import { useDispatch, useSelector } from "react-redux";
-import { API_OPTIONS } from "../utils/constant";
 import { addNowPlayingMovies } from "../redux/movieSlice";
+import { useEffect } from "react";
+// import nowPlaying from "./netlify/functions/nowPlaying"
+// import nowPlaying from "./netlify/nowPlaying"
 
 const useNowPlayingMovies = () => {
   const dispatch = useDispatch();
-  const isMoviesLoaded = useSelector((store) => store.movies.addNowPlayingMovies.length > 0);
+
+  const ismovie = useSelector((store) => store.movies.addNowPlayingMovies);
 
   useEffect(() => {
-    if (!isMoviesLoaded) {
-      fetchNowPlaying();
-    }
-  }, [isMoviesLoaded]);
+    if (!ismovie) fetchNowPlaying();
+  }, []);
 
   async function fetchNowPlaying() {
-    try {
-      const response = await fetch('./netlify/functions/nowPlaying', API_OPTIONS);
-      if (!response.ok) {
-        throw new Error(`HTTPpppppppppp error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      const movies = data.results;
-      dispatch(addNowPlayingMovies(movies));
-    } catch (error) {
-      console.error('Error fetching now playing movies:', error);
-    }
+   
+      let response = await fetch(
+        CORSProxy+"https://api.themoviedb.org/3/movie/now_playing?page=1",
+        API_OPTIONS
+      );
+     
+      let ActualDATA = await response.json();
+      let list = ActualDATA.results;
+  
+      dispatch(addNowPlayingMovies(list));
+   
   }
 };
 

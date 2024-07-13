@@ -1,7 +1,5 @@
-
-
 const fetch = require('node-fetch');
-const { API_OPTIONS } = require('../../utils/constant');
+const { API_OPTIONS } = require('../../../utils/constant');
 
 exports.handler = async function(event, context) {
   try {
