@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
   apiKey: "AIzaSyCz961D2KjOgq41TMAO8zFJogcGKQVA78A",
@@ -12,7 +11,6 @@ const firebaseConfig = {
   measurementId: "G-KCM5ED628Y"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 

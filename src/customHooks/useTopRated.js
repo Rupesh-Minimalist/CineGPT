@@ -20,7 +20,6 @@ const useTopRated=()=>{
     
         let ActualDATA=await response.json();
         let list=ActualDATA.results;
-        console.log(list,"holaaaaaaalalallalalal")
 
         dispatch(addTopRatedMovies(list));
     

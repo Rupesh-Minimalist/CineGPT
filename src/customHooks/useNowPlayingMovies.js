@@ -2,8 +2,6 @@ import { API_OPTIONS, CORSProxy } from "../utils/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../redux/movieSlice";
 import { useEffect } from "react";
-// import nowPlaying from "./netlify/functions/nowPlaying"
-// import nowPlaying from "./netlify/nowPlaying"
 
 const useNowPlayingMovies = () => {
   const dispatch = useDispatch();

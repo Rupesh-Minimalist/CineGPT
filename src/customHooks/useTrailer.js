@@ -22,7 +22,6 @@ const useTrailer = (movieId) => {
 
         dispatch(addTrailerVideo(Trailer))
 
-        
     }
 }
 

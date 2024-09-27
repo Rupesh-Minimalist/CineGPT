@@ -11,8 +11,7 @@ import { useSelector } from 'react-redux';
 
 const Browse = () => {
 
-
-  useNowPlayingMovies(); // calling custom hook
+  useNowPlayingMovies();
   usePopular();
   useTopRated();
   useUpcoming();

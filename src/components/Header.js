@@ -3,7 +3,7 @@ import logo from "../images/logo.png";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../redux/userSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SUPPORTED_LANGUAGES, userLOGO } from "../utils/constant";
 import { toggleGPTbtn } from "../redux/gptSlice";
 import { changeLanguage } from "../redux/configSlice";
@@ -11,19 +11,19 @@ import { changeLanguage } from "../redux/configSlice";
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const user = useSelector((store) => store.user);
   const gptView = useSelector((store) => store.gpt.showGPTsearch);
+  
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleSignout = () => {
     const auth = getAuth();
     signOut(auth)
       .then(() => {
-        // Sign-out successful.
         navigate("/");
       })
       .catch((error) => {
-        // An error happened.
         navigate("/Error");
       });
   };
@@ -38,7 +38,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 15);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -51,12 +51,10 @@ const Header = () => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in,
         const { uid, email, displayName } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
         navigate("/Browse");
       } else {
-        // User is signed out
         dispatch(removeUser());
         navigate("/");
       }
@@ -68,8 +66,6 @@ const Header = () => {
       <div className={`fixed w-full px-8 flex flex-col md:justify-between md:flex-row z-50 ${isScrolled && user ? "bg-gray-900" : "bg-gradient-to-b from-black"} pb-5`}>
         <div>
            <img src={logo} alt="logo" className="w-32 pt-5 mx-auto md:mr-28" onClick={HandleGPT} />
-          
-          
         </div>
 
         {user && (

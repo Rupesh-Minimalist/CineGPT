@@ -11,7 +11,6 @@ const userSlice=createSlice({
             return null;
         }
     }
-
 })
 
 export const {addUser,removeUser}=userSlice.actions;

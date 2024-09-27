@@ -25,36 +25,25 @@ const LoginAuth = () => {
     const Message = validate(email.current.value, password.current.value);
     SeterrMessage(Message);
 
-    if (Message) return; // if null continue otherwise return
+    if (Message) return; 
 
-    const auth = getAuth(app); // Use to the initialized app
+    const auth = getAuth(app); // Used to the initialized firebase app
 
     if (!isSignin) {
       createUserWithEmailAndPassword(auth,email.current.value,password.current.value)
         .then((userCredential) => {
-          const user = userCredential.user;
+          // const user=userCredential.user
           SetsuccMessage("Woho ! Account sucessfully created.");
-          // navigate("/"); done at header
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
           SeterrMessage("Account Already Exist");
         });
     }
     else {
-      signInWithEmailAndPassword(
-        auth,
-        email.current.value,
-        password.current.value
-      )
+      signInWithEmailAndPassword(auth,email.current.value,password.current.value)
         .then((userCredential) => {
-          const user = userCredential.user;
-          // navigate("/browse");done at header
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
           SeterrMessage("Wrong Username or Password");
         });
     }
@@ -80,7 +69,7 @@ const LoginAuth = () => {
           <b className="text-red-500 text-3xl bg-black bg-opacity-70 rounded-xl px-2">GeminiAI</b>
         </div>
 
-        <form onSubmit={(e) => e.preventDefault()} className="absolute top-[50%] md:top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black w-96 flex flex-col text-white rounded-xl bg-opacity-75 ">
+        <form onSubmit={(e) => e.preventDefault()}  className="absolute top-[50%] md:top-[53%] left-1/2 -translate-x-1/2 -translate-y-32 bg-black w-96 flex flex-col text-white rounded-xl bg-opacity-75 ">
           <p className="p-3 text-white font-bold text-3xl text-center">
             {isSignin ? "Sign In" : "Sign up"}
           </p>
